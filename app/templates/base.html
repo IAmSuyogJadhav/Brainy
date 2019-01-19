@@ -1,0 +1,36 @@
+<!--  This is the base template. All other templates will 'inherit' from it. -->
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Microblog</title>
+      {% else %}
+      <title>Welcome to Microblog</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>My App:
+          <a href="{{ url_for('index') }}">Home</a>
+          {% if current_user.is_anonymous %}
+            <a href="{{ url_for('login') }}">Login</a>
+          {% else %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+          {% endif %}
+        </div>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <hr />
+            <ul>
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
+<!--In this template I used the block control statement to define
+the place where the derived templates can insert themselves.
+Blocks are given a unique name, which derived templates can
+reference when they provide their content.-->

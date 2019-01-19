@@ -1,0 +1,33 @@
+<!-- This template now inherits from the base template  -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Hello, {{ current_user.username }}!</h1>
+  <ol>
+    {% for post in posts %}
+    <li><div><p><b>{{ post.body }}</b> by {{ post.author.username}}</p></div></li>
+    {% endfor %}
+  </ol>
+{% endblock %}
+
+
+<!--This is the old version of template.-->
+<!-- <html>
+    <head>
+        This is how you add conditional statements
+        {% if title %}
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Welcome to Microblog</title>
+        {% endif %}
+    </head>
+    <body>
+        <h1>Hello, {{ user.username }}!</h1>
+        <ol>
+          {% for post in posts %}
+          <li><div><p><b>{{ post.body }}</b> by {{ post.author.username}}</p></div></li>
+          {% endfor %}
+        </ol>
+
+    </body>
+</html> -->
