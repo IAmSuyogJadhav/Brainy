@@ -1,34 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Sign In</h1>
-  <form action="" method="post" novalidate>
-    {{ form.hidden_tag() }}
-    <!--  The form.hidden_tag() template argument generates
-     a hidden field that includes a token that is used to
-     protect the form against CSRF attacks. All you need to
-     do to have the form protected is include this hidden field
-     and have the SECRET_KEY variable defined in the Flask
-     configuration. If you take care of these two things,
-     Flask-WTF does the rest for you. -->
+<div class="w3-container">
+     <h1 class="w3-xxxlarge w3-text-red"><b>Login.</b></h1>
+     <hr style="width:50px;border:5px solid red" class="w3-round">
 
-    <p>
-      {{ form.username.label }}<br>
-      {{ form.username(size=32) }}
-      {% for error in form.username.errors %}
-        <span style="color:red;">[{{ error }}] </span>
-      {% endfor %}
-    </p>
-    <p>
-      {{ form.password.label }}<br>
-      {{ form.password(size=32) }}
-      {% for error in form.password.errors %}
-        <span style="color:red;">[{{ error }}] </span>
-      {% endfor %}
-    </p>
-    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-    <p>{{ form.submit() }}</p>
-  </form>
-<p><a href="{{ url_for('register') }}">New User?</a></p>
+     <form action="" method="post" novalidate>
+     {{ form.hidden_tag() }}
+       <div class="w3-section">
+         <label>{{ form.username.label }}</label>
+         <br />
+         {{ form.username() }}
+         {% for error in form.username.errors %}
+           <span style="color:red;">[{{ error }}] </span>
+         {% endfor %}
+       </div>
 
+       <div class="w3-section">
+         <label>{{ form.password.label }}</label>
+         <br />
+         <!-- <input class="w3-input w3-border" type="text" name="Name" required> -->
+         {{ form.password() }}
+         {% for error in form.password.errors %}
+           <span style="color:red;">[{{ error }}] </span>
+         {% endfor %}
+       </div>
+
+       <div class="w3-section">
+         <label>{{ form.remember_me() }} {{ form.remember_me.label }}</label>
+       </div>
+
+       <div class="w3-section">
+         {{ form.submit() }}
+       </div>
+
+       <h3 class="w3-text-red">
+         <a href="{{ url_for('register') }}" class="w3-margin-right" onclick="w3_open()">New User?</a>
+       </h3>
+
+     </form>
+</div>
 {% endblock %}

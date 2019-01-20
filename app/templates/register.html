@@ -1,37 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Register</h1>
+<div class="w3-container">
+  <h1 class="w3-xxxlarge w3-text-red"><b>Register.</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
   <form action="", method="post">
     {{ form.hidden_tag() }}
     <p>
       {{ form.username.label }}<br>
-      {{ form.username(size=32) }}<br>
+      {{ form.username() }}<br>
       {% for error in form.username.errors %}
         <span style="color:red;"> {{ error }} </span>
       {% endfor %}
     </p>
     <p>
       {{ form.email.label }}<br>
-      {{ form.email(size=32) }}<br>
+      {{ form.email() }}<br>
       {% for error in form.email.errors %}
         <span style="color:red;"> {{ error }} </span>
       {% endfor %}
     </p>
     <p>
       {{ form.password.label }}<br>
-      {{ form.password(size=32) }}<br>
+      {{ form.password() }}<br>
       {% for error in form.password.errors %}
         <span style="color:red;"> {{ error }} </span>
       {% endfor %}
     </p>
     <p>
       {{ form.password_again.label }}<br>
-      {{ form.password_again(size=32) }}<br>
+      {{ form.password_again() }}<br>
       {% for error in form.password_again.errors %}
         <span style="color:red;"> {{ error }} </span>
       {% endfor %}
     </p>
     <p> {{ form.submit() }}</p>
   </form>
+
+  </div>
 {% endblock %}

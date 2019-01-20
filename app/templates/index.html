@@ -1,33 +1,22 @@
-<!-- This template now inherits from the base template  -->
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Hello, {{ current_user.username }}!</h1>
-  <ol>
-    {% for post in posts %}
-    <li><div><p><b>{{ post.body }}</b> by {{ post.author.username}}</p></div></li>
-    {% endfor %}
-  </ol>
+<div class="w3-container">
+  {% if files %}
+    <h1 class="w3-xxxlarge w3-text-red"><b>Select an existing MRI scan file.</b></h1>
+    <form action="{{ url_for('analyze') }}", method="post">
+      <select name="files_dropdown" method="GET" action="/">
+        {% for file in files %}
+          <option value= "{{file}}" SELECTED>{{file}}</option>"
+        {% endfor %}
+      </select>
+      <input type = "submit"/>
+    </form>
+  {% else %}
+    <h1 class="w3-xxxlarge w3-text-red"><b>No existing MRI scan file found. Please upload one.</b></h1>
+  {% endif %}
+  <h3 class="w3-text-red">
+    <a href="{{ url_for('upload_file') }}" class="w3-margin-right" onclick="w3_open()">Upload new file.</a>
+  </h3>
+  </div>
 {% endblock %}
-
-
-<!--This is the old version of template.-->
-<!-- <html>
-    <head>
-        This is how you add conditional statements
-        {% if title %}
-        <title>{{ title }} - Microblog</title>
-        {% else %}
-        <title>Welcome to Microblog</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-        <ol>
-          {% for post in posts %}
-          <li><div><p><b>{{ post.body }}</b> by {{ post.author.username}}</p></div></li>
-          {% endfor %}
-        </ol>
-
-    </body>
-</html> -->

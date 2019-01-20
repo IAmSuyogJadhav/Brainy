@@ -35,3 +35,9 @@ class Config(object):
     MAIL_MAX_EMAILS = None  # default
     # MAIL_SUPPRESS_SEND = app.testing   # default
     MAIL_ASCII_ATTACHMENTS = False  # default
+    TEMPLATES_AUTO_RELOAD = True
+    UPLOAD_FOLDER = '/home/anon/projects/panIIT/app/static/images'
+    MAX_CONTENT_PATH = 5e6
+
+    DEBUG = True
+    MODEL = '/home/anon/projects/panIIT/app/static/models/Model.val-loss=-0.38.h5'
