@@ -1,5 +1,5 @@
 <div>
-<img src="assets/icon.png" align="left" height="150px">
+<img src="assets/icon.png" align="left" style="margin: 10 10 10 10;" height="150px">
 	<h1>Brainy</h1>
 <blockquote>The virtual MRI Analyzer</blockquote>
 </div>
@@ -9,7 +9,7 @@
 # Project Overview
 
 <div>
-    <img src="./assets/brain.png" align="left" width='500'>
+    <img src="./assets/brain.png" align="left" style="margin: 10 10 10 10;" width='500'>
     <p>
         MRI is a very popular technique to detect tumours. MRI creates cross-section pictures of your insides. But MRI uses strong magnets to make the images – not radiation. An MRI scan takes cross-sectional slices (views) from many angles, as if someone were looking at a slice of your body from the front, from the side, or from above your head. 
 MRI creates pictures of soft tissue parts of the body that are sometimes hard to see using other imaging tests.MRI is very good at finding and pinpointing some cancers. An MRI with contrast dye is the best way to see brain and spinal cord tumors.
@@ -58,7 +58,7 @@ These skip connections intend to provide local information to the global informa
         </p>
 </div>
 <div>
-        <img src="./assets/unet.jpg" align="left" width='400'><br /><center><b>The U-Net Model</b></center>
+        <img src="./assets/unet.jpg" align="left" style="margin: 10 10 10 10;" width='400'><br /><center><b>The U-Net Model</b></center>
         	<br /><br /><br /></b>The U-Net owes its name to its symmetric shape, which is different from other FCN variants. U-Net architecture is separated in 3 parts:<br /><br />
             <b>1.</b> The contracting/downsampling path <br />
             <b>2.</b> Bottleneck <br />
@@ -69,7 +69,7 @@ These skip connections intend to provide local information to the global informa
 #### Metrics
 
 <div>  
-<img src="./assets/metric.png" align="right" width='200'><br />
+<img src="./assets/metric.png" align="right" style="margin:10 10 10 10;" width='200'><br />
 <p>
         To quantify the performance of our image segmentation, <b>Dice Score</b> is used. The algorithm is validated by calculating the Dice score, which is a measure of how similar the objects are. So it is the size of the overlap of the two segmentations divided by the total size of the two objects. That is, the score for a particular class c is the size of the overlap between the predicted region and its true counterpart. We were able to achieve best coefficient of dice loss score <b>0.43</b> (higher the better).
 </p>
@@ -77,7 +77,7 @@ These skip connections intend to provide local information to the global informa
 
 # Preview
 <div>
-<img src="assets/analyze.png"  align="centre" width="500px" style="margin: 10 10 10 10;"><br />
+<img src="assets/analyze.png" align="centre" width="500px" style="margin: 10 10 10 10;"><br />
 	<p align="center"><b>A screenshot of the project interface</b></p>
 </div>
 
