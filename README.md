@@ -1,15 +1,13 @@
 <div>
-<!--     <div style="float:left;margin:0 10px 10px 0" markdown="1"> -->
 <img src="assets/icon.png" align="left" height="150px">
-<!--    </div> -->
-<font size="+6">Brainy</font>
+	<h1>Brainy</h1>
+<blockquote>The virtual MRI Analyzer</blockquote>
 </div>
-
-<center><blockquote>The virtual MRI Analyzer</blockquote></center>
+<hr />
 <div>
-<img src="assets/analyze.png" width="500px">
+<img src="assets/analyze.png"><br />
+	<p align="center"><b>A screenshot of the project interface</b></p>
 </div>
-<center><b>A screenshot of the project interface</b></center>
 
 # Project Overview
 
