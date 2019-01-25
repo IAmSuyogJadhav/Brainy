@@ -1,4 +1,5 @@
 import os
+from flask import url_for
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -36,8 +37,8 @@ class Config(object):
     # MAIL_SUPPRESS_SEND = app.testing   # default
     MAIL_ASCII_ATTACHMENTS = False  # default
     TEMPLATES_AUTO_RELOAD = True
-    UPLOAD_FOLDER = '/home/anon/projects/panIIT/app/static/images'
+    UPLOAD_FOLDER = './app/static/images'
     MAX_CONTENT_PATH = 5e6
 
     DEBUG = True
-    MODEL = '/home/anon/projects/panIIT/app/static/models/Model.val-loss=-0.38.h5'
+    MODEL = './app/static/models/Model.val-loss=-0.38.h5'

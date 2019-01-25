@@ -5,7 +5,8 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
 
-app = Flask(__name__, static_folder='/home/anon/projects/panIIT/app/static')
+# Change the following
+app = Flask(__name__)
 app.debug = True
 
 app.config.from_object(Config)
