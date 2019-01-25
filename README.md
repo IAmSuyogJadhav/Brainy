@@ -1,9 +1,9 @@
-<div>
-    <div style="float:left;margin:0 10px 10px 0" markdown="1">
-    	<img src='assets/icon.png' height="150px">
-    </div>
+<!-- <div> -->
+<!--     <div style="float:left;margin:0 10px 10px 0" markdown="1"> -->
+    	<img align="left" src='assets/icon.png' height="150px">
+<!--    </div> -->
     <center><p style='font-size:60px;margin:0 0 0 0'>Brainy</font></center>
-</div>
+<!-- </div> -->
 
 <center><blockquote>The virtual MRI Analyzer</blockquote></center>
 
