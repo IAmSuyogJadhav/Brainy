@@ -3,24 +3,20 @@
 	<h1>Brainy</h1>
 <blockquote>The virtual MRI Analyzer</blockquote>
 </div>
+<br />
 <hr />
-<div>
-<img src="assets/analyze.png"><br />
-	<p align="center"><b>A screenshot of the project interface</b></p>
-</div>
 
 # Project Overview
 
 <div>
-    <div style="float:left;margin:0 10px 10px 0" markdown="1">
-    <img src="./assets/brain.png", width='500'>
-    </div>
+    <img src="./assets/brain.png" align="left" width='500'>
     <p>
         MRI is a very popular technique to detect tumours. MRI creates cross-section pictures of your insides. But MRI uses strong magnets to make the images – not radiation. An MRI scan takes cross-sectional slices (views) from many angles, as if someone were looking at a slice of your body from the front, from the side, or from above your head. 
 MRI creates pictures of soft tissue parts of the body that are sometimes hard to see using other imaging tests.MRI is very good at finding and pinpointing some cancers. An MRI with contrast dye is the best way to see brain and spinal cord tumors.
     </p>
 </div>
-## **Why this Project** 
+
+## Why this Project
 
 > With a surge in the brain related ailments in the world, every year over 2,500 of the Indian children suffer from medulloblastoma, a pediatric malignant primary brain tumour which spreads through the cerebrospinal fluid (CSF) and frequently metastasize to different locations along the surface of the brain and spinal cord, doctors have said.
 >
@@ -39,23 +35,21 @@ MRI creates pictures of soft tissue parts of the body that are sometimes hard to
 
 - The condition is much more worse in the rural areas where the count of Oncologists is much less.
 
-## **Proposed Solution**
+## Proposed Solution
 
 > *Jump directly to the training notebook by clicking **[here](training.ipynb)***
 
 ​	In order to solve this problem, we propose Brainy, our Brain MRI segmentation tool. Not only would Brainy automatise the entire process of diagnosis for tumours , but it would also help in solving out those cases which are generally missed by the human eye. 
 
-#### **About the Dataset**
+#### About the Dataset
 
 ​	The data that we’ve used is the BRATS dataset. This dataset contains the segmented images of the brain tissues. After the image has been segmented, there are 5 classes namely Necrosis, Edema , Non-Enhancing tumour , Enhancing  tumour and the background. There are about 220 images in the training dataset.
 
-#### **The Model**
+#### The Model
 
 <div>
-    <div style="float:left;margin:0 10px 10px 20px" markdown="1">
-        <img src="./assets/model-pipeline.png", width='400'><br /><center><b>The Model Pipeline</b></center>
-	</div>
-        <p>
+      <img src="./assets/model-pipeline.png", align="right" width='400'><br />
+      <p>
             To segment the brain MRI’s we use a popular network called <b>U-Net</b>.
 The U-Net architecture is built upon the Fully Convolutional Network and modified in a way that it yields better segmentation in medical imaging. Compared to FCN-8, the two main differences are: <br /><br />
             <b>1.</b> U-net is symmetric and <br />
@@ -64,10 +58,7 @@ These skip connections intend to provide local information to the global informa
         </p>
 </div>
 <div>
-    <div style="float:right;margin:0 10px 10px 20px" markdown="1">
-        <img src="./assets/unet.jpg", width='400'><br /><center><b>The U-Net Model</b></center>
-	</div>
-    <p>
+        <img src="./assets/unet.jpg" align="left" width='400'><br /><center><b>The U-Net Model</b></center>
         	<br /><br /><br /></b>The U-Net owes its name to its symmetric shape, which is different from other FCN variants. U-Net architecture is separated in 3 parts:<br /><br />
             <b>1.</b> The contracting/downsampling path <br />
             <b>2.</b> Bottleneck <br />
@@ -77,20 +68,24 @@ These skip connections intend to provide local information to the global informa
 
 #### Metrics
 
-<div>
-    <div style="float:left;margin:0 10px 10px 20px" markdown="1">
-        <img src="./assets/metric.png", width='200'><br /><center><b>Dice Loss Equation</b></center>
-	</div>
-    <p>
+<div>  
+<img src="./assets/metric.png" align="right" width='200'><br />
+<p>
         To quantify the performance of our image segmentation, <b>Dice Score</b> is used. The algorithm is validated by calculating the Dice score, which is a measure of how similar the objects are. So it is the size of the overlap of the two segmentations divided by the total size of the two objects. That is, the score for a particular class c is the size of the overlap between the predicted region and its true counterpart. We were able to achieve best coefficient of dice loss score <b>0.43</b> (higher the better).
-    </p>
+</p>
 </div> 
+
+# Preview
+<div>
+<img src="assets/analyze.png"  align="centre" width="500px" style="margin: 10 10 10 10;"><br />
+	<p align="center"><b>A screenshot of the project interface</b></p>
+</div>
 
 # Team
 
 | <a href="http://github.com/gktejus" target="_blank"><img src="assets/Gk.png" height="150px"></a> | <a href="http://github.com/IAmSuyogJadhav" target="_blank"><img src="assets/Suyog.png" height="150px"></a> | <a href="http://github.com/ubamba98" target="_blank"><img src="assets/Udbhav.png" height="150px"></a> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|            [Gk Tejus](http://github.com/gktejus)             | [Suyog Jadhav](<a href="http://github.com/IAmSuyogJadhav" target="_blank">) | [Udbhav Bamba](<a href="http://github.com/ubamba98" target="_blank">) |
+|            [Gk Tejus](http://github.com/gktejus)             | [Suyog Jadhav](http://github.com/IAmSuyogJadhav) | [Udbhav Bamba](http://github.com/ubamba98) |
 
 ---
 
