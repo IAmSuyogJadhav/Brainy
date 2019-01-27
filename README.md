@@ -99,3 +99,4 @@ These skip connections intend to provide local information to the global informa
 
 ---
 
+> This project was made as part of the **PanIIT Conclave 2019 - Mission AI: Solve for India**, a 24 hour hackathon organised at IIT Delhi, India on 19th-20th January.
