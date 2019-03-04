@@ -1,0 +1,39 @@
+<ul id="main-menu" data-nav-showing="false" style="transform: translate(0%, -116%) matrix(1, 0, 0, 1, 0, 0);">
+  <!-- <li class="nav-jr home-anc"><h4><a href="#home"><br></a></h4></li> -->
+  <div class="flexbox-parent">
+    <div class="flexbox-child">
+      <li class="about-anc">
+        <h4><a class="nav-underline home" href="{{site.url}}">Home</a></h4></li>
+      {% for page in site.pages %}
+        {% if page.tags contains "about" %}
+          <li class="about-anc">
+            <h4><a class="nav-underline about" href="{{page.url}}">{{page.title}}</a></h4></li>
+        {% endif %}
+        {% if page.tags contains "contact" %}
+          <li class="expertise-anc">
+            <h4><a class="nav-underline contact" href="{{page.url}}">{{page.title}}</a></h4></li>
+        {% endif %}
+        {% if page.tags contains "portfolio" %}
+          <li class="team-anc">
+            <h4><a class="nav-underline portfolio" href="{{page.url}}">{{page.title}}</a></h4></li>
+        {% endif %}
+        {% if page.tags contains "projects" %}
+          <li class="beliefs-anc">
+            <h4><a class="nav-underline open-source" href="{{page.url}}">{{page.title}}</a></h4></li>
+        {% endif %}
+        {% if page.tags contains "resume" %}
+          <li class="beliefs-anc">
+            <h4><a class="nav-underline resume" href="{{page.url}}">{{page.title}}</a></h4></li>
+        {% endif %}
+      {% endfor %}
+          <li>
+          {% if site.show_social_icons %}
+            {% include social_links.html %}
+          {% endif %}
+          </li>
+  </div>
+</ul>
+<!--
+<div class="title-div">
+  <div class="title" style="transform: translate(0%, -116%) matrix(1, 0, 0, 1, 0, 0);"><span class="title-label">About</span></div>
+</div> -->
