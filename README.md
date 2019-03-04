@@ -1,5 +1,5 @@
 ---
-layout: {{ site.default }}
+layout: default
 title: Brainy
 tags: projects
 permalink: /brainy/
