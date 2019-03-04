@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Projects & Open-Source
+title: Brainy
 tags: projects
-permalink: /projects/
+permalink: /brainy/
 ---
 
 <div>
