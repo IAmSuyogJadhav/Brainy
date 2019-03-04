@@ -2,7 +2,6 @@
 layout: default
 title: Brainy
 tags: projects
-permalink: /brainy/
 ---
 
 <div>
