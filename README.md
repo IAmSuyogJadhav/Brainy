@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Brainy
 tags: projects
 ---
@@ -17,7 +17,7 @@ tags: projects
 <div>
     <img src="./assets/brain.png" align="left" style="margin: 10 10 10 10;" width='500'>
     <p>
-        MRI is a very popular technique to detect tumours. MRI creates cross-section pictures of your insides. But MRI uses strong magnets to make the images – not radiation. An MRI scan takes cross-sectional slices (views) from many angles, as if someone were looking at a slice of your body from the front, from the side, or from above your head. 
+        MRI is a very popular technique to detect tumours. MRI creates cross-section pictures of your insides. But MRI uses strong magnets to make the images – not radiation. An MRI scan takes cross-sectional slices (views) from many angles, as if someone were looking at a slice of your body from the front, from the side, or from above your head.
 MRI creates pictures of soft tissue parts of the body that are sometimes hard to see using other imaging tests.MRI is very good at finding and pinpointing some cancers. An MRI with contrast dye is the best way to see brain and spinal cord tumors.
     </p>
 </div>
@@ -32,12 +32,12 @@ MRI creates pictures of soft tissue parts of the body that are sometimes hard to
 
 <div align="right"><blockquote><i>-Source (“The Hindu “)</i></blockquote></div>
 
-- Though the technology used in MRI seems to be quite technically advanced, for the detection of tumour in the MRI image, currently we mostly rely on human skill and expertise. 
+- Though the technology used in MRI seems to be quite technically advanced, for the detection of tumour in the MRI image, currently we mostly rely on human skill and expertise.
 
-- Although this method proves to be accurate in most of the cases, it sometimes fails when the human eye fails to detect tiny irregularities 
+- Although this method proves to be accurate in most of the cases, it sometimes fails when the human eye fails to detect tiny irregularities
 - In a country like India, there is a lack of skilled Oncologists and Neurologists present.
 
-- According to a report in 2018 , the country is facing a severe shortage of care-givers with merely 2000 Oncologists to look after around 10 Million patients. 
+- According to a report in 2018 , the country is facing a severe shortage of care-givers with merely 2000 Oncologists to look after around 10 Million patients.
 
 - The condition is much more worse in the rural areas where the count of Oncologists is much less.
 
@@ -45,7 +45,7 @@ MRI creates pictures of soft tissue parts of the body that are sometimes hard to
 
 > *Jump directly to the training notebook by clicking **[here](training.ipynb)***
 
-​	In order to solve this problem, we propose Brainy, our Brain MRI segmentation tool. Not only would Brainy automatise the entire process of diagnosis for tumours , but it would also help in solving out those cases which are generally missed by the human eye. 
+​	In order to solve this problem, we propose Brainy, our Brain MRI segmentation tool. Not only would Brainy automatise the entire process of diagnosis for tumours , but it would also help in solving out those cases which are generally missed by the human eye.
 
 #### About the Dataset
 
@@ -60,7 +60,7 @@ MRI creates pictures of soft tissue parts of the body that are sometimes hard to
 The U-Net architecture is built upon the Fully Convolutional Network and modified in a way that it yields better segmentation in medical imaging. Compared to FCN-8, the two main differences are: <br /><br />
             <b>1.</b> U-net is symmetric and <br />
             <b>2.</b> The skip connections between the downsampling path and the upsampling path apply a concatenation operator instead of a sum. <br /><br />
-These skip connections intend to provide local information to the global information while upsampling. Because of its symmetry, the network has a large number of feature maps in the upsampling path, which allows to transfer information. By comparison, the basic FCN architecture only had number of classes feature maps in its upsampling path. 
+These skip connections intend to provide local information to the global information while upsampling. Because of its symmetry, the network has a large number of feature maps in the upsampling path, which allows to transfer information. By comparison, the basic FCN architecture only had number of classes feature maps in its upsampling path.
         </p>
 </div>
 <div>
@@ -79,7 +79,7 @@ These skip connections intend to provide local information to the global informa
 <p>
         To quantify the performance of our image segmentation, <b>Dice Score</b> is used. The algorithm is validated by calculating the Dice score, which is a measure of how similar the objects are. So it is the size of the overlap of the two segmentations divided by the total size of the two objects. That is, the score for a particular class c is the size of the overlap between the predicted region and its true counterpart. We were able to achieve best coefficient of dice loss score <b>0.43</b> (higher the better).
 </p>
-</div> 
+</div>
 
 # Preview
 <div>
