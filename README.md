@@ -1,3 +1,10 @@
+---
+layout: default
+title: Projects & Open-Source
+tags: projects
+permalink: /projects/
+---
+
 <div>
 <img src="assets/icon.png" align="left" style="margin: 10 10 10 10;" height="150px">
 	<h1>Brainy</h1>
