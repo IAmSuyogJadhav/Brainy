@@ -89,7 +89,7 @@ These skip connections intend to provide local information to the global informa
 # Team
 
 | <a href="http://github.com/gktejus" target="_blank"><img src="assets/Gk.png" height="150px"></a> | <a href="http://github.com/IAmSuyogJadhav" target="_blank"><img src="assets/Suyog.png" height="150px"></a> | <a href="http://github.com/ubamba98" target="_blank"><img src="assets/Udbhav.png" height="150px"></a> |
-| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| :-----------------------------------------------: | :------------------------------------------------: | :---------------------------------------------: |
 |            [Gk Tejus](http://github.com/gktejus)             | [Suyog Jadhav](http://github.com/IAmSuyogJadhav) | [Udbhav Bamba](http://github.com/ubamba98) |
 
 ---
