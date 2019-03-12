@@ -105,9 +105,14 @@ permalink:    pretty
 paginate:     4
 sass:
   compressed: true
-gems:
+
+remote_theme: IAmSuyogJadhav/iamsuyogjadhav.github.io
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag
 # https://github.com/jekyll/jekyll/issues/2938
 exclude: [vendor]
 
