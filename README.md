@@ -83,6 +83,7 @@ These skip connections intend to provide local information to the global informa
 <img src="assets/analyze.png" align="centre" width="500px" style="margin: 10 10 10 10;"><br />
 	<p align="center"><b>A screenshot of the project interface</b></p>
 </div>
+
 # Installation Instructions
 
 > **Please note that the project is NOT yet completely ready to launch, and will probably fail to run on your PC.**
