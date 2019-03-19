@@ -4,7 +4,10 @@
 <blockquote>The virtual MRI Analyzer</blockquote>
 </div>
 <br />
+
 <hr />
+
+> [Installation Instructions](#Installation-Instructions) towards the end.
 
 # Project Overview
 
@@ -80,6 +83,45 @@ These skip connections intend to provide local information to the global informa
 <img src="assets/analyze.png" align="centre" width="500px" style="margin: 10 10 10 10;"><br />
 	<p align="center"><b>A screenshot of the project interface</b></p>
 </div>
+# Installation Instructions
+
+> **Please note that the project is NOT yet completely ready to launch, and will probably fail to run on your PC.**
+
+Though the model currently is far from state-of-the-art accuracy, rest of the things should work fine. You can try running the project on your local environment by following the steps below:
+
+1. Clone this repository
+
+   ```bash
+   git clone https://github.com/IAmSuyogJadhav/Brainy.git
+   ```
+
+   or [Download](https://github.com/IAmSuyogJadhav/Brainy/archive/master.zip) and then extract its contents.
+
+2. Change to the root folder of repository and run following commands in the terminal:
+
+   ```bash
+   sudo apt-get install python3 -y
+   sudo apt-get install python3-pip -y
+   pip3 install -r requirements.txt
+   ```
+
+3. Now start the flask server using following command:
+
+   ```bash
+   flask run
+   ```
+
+   It may take a while. 
+
+4. Now open your browser and navigate to http://localhost:5000. Click on **New User?** and register yourself (Don't worry, there's no cloud based database. Your credentials are just being stored locally. Feel free to use fake data.).
+
+5. Upload a `.mha` image using the uploader GUI (you won't need internet for this), choose it from the dropdown menu to analyze the results. This last part is currently under work.
+
+   > You might get an error 
+   >
+   > `Tensor Tensor("activation_143/Sigmoid:0", shape=(?, 1, 120, 120, 120), dtype=float32) is not an element of this graph.` 
+   >
+   > We are investigating this and currently there's no fix for this.
 
 # Team
 
@@ -100,3 +142,10 @@ These skip connections intend to provide local information to the global informa
 ---
 
 > This project was made as part of the **TCS PanIIT Conclave 2019 - Mission AI: Solve for India**, a 24 hour hackathon organised at IIT Delhi, India on 19th-20th January by the PanIIT organisation, Skillenza and TCS. Our project achieved 4th rank at the same.
+
+# Notebook
+
+The training notebook can be accessed below:
+
+<a href="https://colab.research.google.com/github/IAmSuyogJadhav/Brainy/blob/master/training.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
