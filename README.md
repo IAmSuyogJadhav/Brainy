@@ -150,3 +150,10 @@ The training notebook can be accessed below:
 
 <a href="https://colab.research.google.com/github/IAmSuyogJadhav/Brainy/blob/master/training.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
+# Contributing
+This project holds huge potential and is still a work in progress. If you'd like to contribute, please [drop me a mail](mailto:me@suyogjadhav.com). Needn't be anything formal, even a "Hello, wanted to contribute to Brainy." would more than suffice :p. I have a couple of things on my mind right now. We can discuss and start working accordingly.
+
+I will be adding a few instructions to get started in the _[wiki](https://github.com/IAmSuyogJadhav/Brainy/wiki)_ tab shortly.
+
+# Updates
+- **29-03-2019**: Added code for Building ANTS from source, for Colab.
