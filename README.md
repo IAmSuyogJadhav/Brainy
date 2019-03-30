@@ -156,4 +156,5 @@ This project holds huge potential and is still a work in progress. If you'd like
 I will be adding a few instructions to get started in the _[wiki](https://github.com/IAmSuyogJadhav/Brainy/wiki)_ tab shortly.
 
 # Updates
+- **30-03-2019**: Completed a step of preprocessing namely, _N4 Bias Correction_. The code has been uploaded in a jupyter notebook (see [Preprocessing.ipynb](Preprocessing.ipynb))
 - **29-03-2019**: Added code for Building ANTS from source, for Colab. An article containing links to pre-built ANTs binaries built specifically for Google Colab and how to install it is also up on my blog ([read here](https://www.suyogjadhav.com/misc/2019/03/28/Using-ANTs-package-on-Google-Colaboratory/)).
