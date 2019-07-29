@@ -14,3 +14,4 @@ Keras==2.2.4
 SimpleITK==1.2.0
 imageio==2.4.1
 tensorflow
+gunicorn
