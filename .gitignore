@@ -1,3 +1,7 @@
+# Project-Specific
+app/static/images/gifs/*.*
+app/static/images/*.*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 app/__pycache__/
