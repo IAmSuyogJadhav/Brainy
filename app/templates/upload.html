@@ -1,13 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+h4 {display: inline}
+</style>
 <div class="w3-container">
-<h1 class="w3-xxxlarge w3-text-red"><b>Upload File.</b></h1>
+<h1 class="w3-xxxlarge w3-text-red"><b>Upload the following 4 MRI files.</b></h1>
 <hr style="width:50px;border:5px solid red" class="w3-round">
+<br />
 <form action = "http://localhost:5000/uploader" method = "POST"
-   enctype = "multipart/form-data">
-   <input type = "file" name = "file" />
+    enctype = "multipart/form-data">
+  <h4 class="w3-xlarge w3-text-red"><b>T1: </b></h4>
+     <input type = "file" name = "t1" required/>
+&#9;&#9;
+
+  <h4 class="w3-xlarge w3-text-red"><b>T2w: </b></h4>
+     <input type = "file" name = "t2w" required/>
+<br />
+
+  <h4 class="w3-xlarge w3-text-red"><b>T1CE: </b></h4>
+     <input type = "file" name = "t1ce" required/>
+&#9;&#9;
+  <h4 class="w3-xlarge w3-text-red"><b>FLAIR: </b></h4>
+    <input type = "file" name = "flair" required/>
+<br />
+
+<h4 class="w3-xlarge w3-text-red"><b>Name</b></h4> (Choose a unique name or the previously uploaded files will get overwritten)<br/>
+  <input type = "text" name = "name" required/>
+<br />
+
    <input type = "submit"/>
+
 </form>
 </div>
 {% endblock %}

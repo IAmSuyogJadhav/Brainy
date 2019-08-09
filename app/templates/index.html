@@ -3,7 +3,7 @@
 {% block content %}
 <div class="w3-container">
   {% if files %}
-    <h1 class="w3-xxxlarge w3-text-red"><b>Select an existing MRI scan file.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Select an existing MMRI scan file.</b></h1>
     <form action="{{ url_for('analyze') }}", method="post">
       <select name="files_dropdown" method="GET" action="/">
         {% for file in files %}
@@ -13,10 +13,19 @@
       <input type = "submit"/>
     </form>
   {% else %}
-    <h1 class="w3-xxxlarge w3-text-red"><b>No existing MRI scan file found. Please upload one.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>No existing multimodal-MRI file found. Please upload one.</b></h1>
   {% endif %}
-  <h3 class="w3-text-red">
+  <h3 class="w3-text-black">
     <a href="{{ url_for('upload_file') }}" class="w3-margin-right" onclick="w3_open()">Upload new file.</a>
   </h3>
+  <h3 class="w3-xlarge w3-text-red"><b>Steps to create one:</b></h3>
+
+   <ol>
+     <li> Go to the upload section and upload MRI scans of all 4 modalities (T1, T2w, T1ce and FLAIR), either in .mha or .nii.gz format.</li>
+     <li> Provide a unique name, you will need it later.</li>
+     <li> Wait for it to finish. You will be automaticlly redirected back to the homepage.</li>
+     <li> Your MMRI file will now be exported and displayed in a dropdown menu on the homepage. Click on it to get it processed.</li>
+   </ol>
+
   </div>
 {% endblock %}

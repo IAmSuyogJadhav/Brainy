@@ -54,12 +54,7 @@
   </div>
   <div class="w3-bar-block">
     <a href="/index" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-    {% if current_user.is_anonymous %}
-      <a href="{{ url_for('login') }}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Login</a>
-    {% else %}
     <a href="/upload" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Upload an MRI scan</a>
-      <a href="{{ url_for('logout') }}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Logout</a>
-    {% endif %}
   </div>
 </nav>
 

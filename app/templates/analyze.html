@@ -13,31 +13,24 @@
     <center><h1 class="w3-jumbo w3-text-black"><b>Analysis.</b></h1></center>
     <center><hr style="width:50;border:5px solid red" class="w3-round"></center>
 
-    <h2 class="w3-xxxlarge w3-text-black"><b>Visualization</b></h2>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <hr / >
-    An MRI scan can be visualized along three different planes:
-
-    <ul>
-      <li><b>Sagittal plane</b>, (also known as median plane) is an y-z plane, perpendicular to the ground, which separates left from right. The mid-sagittal plane is the specific sagittal plane that is exactly in the middle of the body.</li>
-      <li><b>Coronal plane</b>, (also known as frontal plane) is an x-z plane, perpendicular to the ground, which (in humans) separates the anterior from the posterior, the front from the back, the ventral from the dorsal.</li>
-      <li><b>Transverse plane</b>, (also known as axial or horizontal plane) is an x-y-z plane, parallel to the ground, which (in humans) separates the superior from the inferior, or put another way, the head from the feet.</li>
-    </ul>
-
     <h3 class="w3-xxxlarge w3-text-black"><b>Input Images</b></h3>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <div class="row">
       <div class="column">
-        <center><h3 class="w3-xlarge w3-text-black">Coronal</h3></center>
-        <img src="{{ url_for('static', filename='images/gifs/x.gif') }}" alt="Coronal" style="width:100%;">
+        <center><h3 class="w3-xlarge w3-text-black">T1</h3></center>
+        <img src="{{ url_for('static', filename='images/gifs/t1.gif') }}" alt="T1" style="width:100%;">
       </div>
       <div class="column">
-        <center><h3 class="w3-xlarge w3-text-black">Saggital</h3></center>
-        <img src="{{ url_for('static', filename='images/gifs/z.gif') }}" alt="Saggital" style="width:100%">
+        <center><h3 class="w3-xlarge w3-text-black">T2w</h3></center>
+        <img src="{{ url_for('static', filename='images/gifs/t2.gif') }}" alt="T2" style="width:100%">
       </div>
       <div class="column">
-        <center><h3 class="w3-xlarge w3-text-black">Transverse</h3></center>
-        <img src="{{ url_for('static', filename='images/gifs/y.gif') }}" alt="Transverse" style="width:100%">
+        <center><h3 class="w3-xlarge w3-text-black">T1CE</h3></center>
+        <img src="{{ url_for('static', filename='images/gifs/t1ce.gif') }}" alt="T1CE" style="width:100%">
+      </div>
+      <div class="column">
+        <center><h3 class="w3-xlarge w3-text-black">FLAIR</h3></center>
+        <img src="{{ url_for('static', filename='images/gifs/flair.gif') }}" alt="FLAIR" style="width:100%">
       </div>
     </div>
 
@@ -45,18 +38,28 @@
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <div class="row">
       <div class="column">
-        <center><h3 class="w3-xlarge w3-text-black">Coronal</h3></center>
-        <img src="{{ url_for('static', filename='images/gifs/x.gif') }}" alt="Coronal" style="width:100%;">
+        <center><h3 class="w3-xlarge w3-text-black">Segmented T1</h3></center>
+        <img src="{{ url_for('static', filename='images/gifs/t1_seg.gif') }}" alt="Segmented T1" style="width:100%;">
+        <a href='/download-mask/{{ file }}/t1', target='_blank'><center><h3 class="w3-xlarge w3-text-red">Download</h3></center></a>
       </div>
       <div class="column">
-        <center><h3 class="w3-xlarge w3-text-black">Saggital</h3></center>
-        <img src="{{ url_for('static', filename='images/gifs/z.gif') }}" alt="Saggital" style="width:100%">
+        <center><h3 class="w3-xlarge w3-text-black">Segmented T2w</h3></center>
+        <img src="{{ url_for('static', filename='images/gifs/t2_seg.gif') }}" alt="Segmented T2" style="width:100%">
+        <a href='/download-mask/{{ file }}/t2', target='_blank'><center><h3 class="w3-xlarge w3-text-red">Download</h3></center></a>
       </div>
       <div class="column">
-        <center><h3 class="w3-xlarge w3-text-black">Transverse</h3></center>
-        <img src="{{ url_for('static', filename='images/gifs/y.gif') }}" alt="Transverse" style="width:100%">
+        <center><h3 class="w3-xlarge w3-text-black">Segmented T1CE</h3></center>
+        <img src="{{ url_for('static', filename='images/gifs/t1ce_seg.gif') }}" alt="Segmented T1CE" style="width:100%">
+        <a href='/download-mask/{{ file }}/t1ce', target='_blank'><center><h3 class="w3-xlarge w3-text-red">Download</h3></center></a>
+      </div>
+      <div class="column">
+        <center><h3 class="w3-xlarge w3-text-black">Segmented FLAIR</h3></center>
+        <img src="{{ url_for('static', filename='images/gifs/flair_seg.gif') }}" alt="Segmented FLAIR" style="width:100%">
+        <a href='/download-mask/{{ file }}/flair', target='_blank'><center><h3 class="w3-xlarge w3-text-red">Download</h3></center></a>
       </div>
     </div>
+
+    <h3 class="w3-xxxlarge w3-text-black"><b>Download MRI scans with segmentations</b></h3>
 
   </div>
 {% endif %}
