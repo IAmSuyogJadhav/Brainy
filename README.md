@@ -77,7 +77,7 @@ MRI creates pictures of soft tissue parts of the body that are sometimes hard to
 
 #### About the Dataset
 
-​	The data that we’ve used is the BRATS dataset. This dataset contains the segmented images of the brain tissues. After the image has been segmented, there are 3 classes namely Necrosis/Non-Enhancing tumour (NCR/NET), Edema (ED) and Enhancing  tumour (ET). There are about 220 images in the training dataset.
+​	The data that we’ve used is the BRATS dataset. This dataset contains the segmented images of the brain tissues. After the image has been segmented, there are 3 classes namely Necrotic and Non-Enhancing tumour (NCR/NET), Peritumoral Edema (ED) and GD-Enhancing  tumour (ET). There are about 220 images in the training dataset.
 
 #### The Model
 
