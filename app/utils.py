@@ -104,11 +104,9 @@ def load_old_model(model_file):
             raise error
 
 
-model = load_old_model(app.config['MODEL'])
-graph = tf.get_default_graph()
-
-
 def make_gif(file):
+    model = load_old_model(app.config['MODEL'])
+    graph = tf.get_default_graph()
     img = np.load(f'{app.config["UPLOAD_FOLDER"]}/{file}')
     img = np.array([
         preprocess(img[m],  out_shape=(80, 96, 64), labels=True)

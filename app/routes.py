@@ -117,8 +117,12 @@ def analyze():
         return render_template('analyze.html', title='Results', success=success,
                                file=out_file, error=error, folder=app.config["UPLOAD_FOLDER"])
     elif request.method == 'GET':
-        flash('Select a MMRI file from the list or add your own.')
-        return redirect(url_for('index'))
+        if app.config['TESTING_ANALYZE']:
+            return render_template('analyze.html', title='Testing Analyze', success=True,
+                                   file='Test', error='error', folder=app.config["UPLOAD_FOLDER"])
+        else:
+            flash('Select a MMRI file from the list or add your own to get the prediction result.')
+            return redirect(url_for('index'))
 
 
 @app.route('/download-mask/<file>/<mod>', methods=['GET'])

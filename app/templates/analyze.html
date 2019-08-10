@@ -36,6 +36,13 @@
 
     <h3 class="w3-xxxlarge w3-text-black"><b>Output (Segmented Tumors)</b></h3>
     <hr style="width:50px;border:5px solid red" class="w3-round">
+    <br />
+    <b>Label coding:</b><br />
+    In Red: NCR/NET <br />
+    In Green: ED <br />
+    In Blue: ET <br />
+    <br />
+    *The segmentations appear somewhat blurred out because the resolution is lowered before feeding the MRI to our model. This helps computation and reduces load on the PC.
     <div class="row">
       <div class="column">
         <center><h3 class="w3-xlarge w3-text-black">Segmented T1</h3></center>
@@ -58,8 +65,6 @@
         <a href='/download-mask/{{ file }}/flair', target='_blank'><center><h3 class="w3-xlarge w3-text-red">Download</h3></center></a>
       </div>
     </div>
-
-    <h3 class="w3-xxxlarge w3-text-black"><b>Download MRI scans with segmentations</b></h3>
 
   </div>
 {% endif %}
