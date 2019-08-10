@@ -23,14 +23,15 @@
 
    or [Download](https://github.com/IAmSuyogJadhav/Brainy/archive/master.zip) and then extract its contents.
 
-2. Change to the root folder of repository and run following commands in the terminal:
+2. Download the model from [here](https://drive.google.com/open?id=1U6o7FfR7Fue6ukIg_ciUoN0rjZs6QfrW) and put the file inside `app/static/models/` folder. Do not change the name (It should be `Model_1.h5`).
 
-   ```bash
-	python3 install.py
-   ```
-   This only needs to be done the first time.
+3. From the root folder of te repository, run:
+```bash
+pip3 install -r requirements.txt
+```
+to install ll the dependencies. Note that this project is based on python3.
 
-3. Start the app using following command, when in the main folder:
+4. Start the app using following command, when in the main folder:
 
    ```bash
    flask run
@@ -38,7 +39,7 @@
 
    It may take a while. 
 
-4. Now open your browser and navigate to http://localhost:5000 and follow the instructions. It is recommended to have a Nvidia GPU, since it can speed up the prediction task manifolds.
+5. Now open your browser and navigate to http://localhost:5000 and follow the instructions. It is recommended to have a Nvidia GPU, since it can speed up the prediction task manifolds.
 
 # Project Overview
 
