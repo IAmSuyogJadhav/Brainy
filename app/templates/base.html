@@ -18,7 +18,9 @@
         .w3-half img{margin-bottom:-6px;margin-top:0px;opacity:0.8;cursor:pointer}
         .w3-half img:hover{opacity:1}
       </style>
-
+      <!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
       <style>
       /* * {
         box-sizing: border-box;
@@ -38,9 +40,12 @@
         flex: 33.33%;
         padding: 5px;
       }
+
       </style>
     </head>
     <body>
+
+      <a class="github-fork-ribbon" href="https://www.github.com/IAmSuyogJadhav/Brainy" data-ribbon="Fork me on GitHub" title="Fork me on GitHub"></a>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
@@ -54,12 +59,13 @@
   </div>
   <div class="w3-bar-block">
     <a href="/index" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-    {% if current_user.is_anonymous %}
-      <a href="{{ url_for('login') }}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Login</a>
-    {% else %}
-    <a href="/upload" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Upload an MRI scan</a>
-      <a href="{{ url_for('logout') }}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Logout</a>
-    {% endif %}
+    <a href="/upload" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Generate a new MMRI file</a>
+    <a href="https://github.com/IAmSuyogJadhav/Brainy/issues/new" target='_blank' onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Report an Issue</a>
+    <br />
+    <a class="w3-bar-item w3-button w3-hover-white">Support the developers!</a>
+    <a class="github-button" href="https://github.com/IAmSuyogJadhav" data-size="large" data-show-count="true" aria-label="Follow @IAmSuyogJadhav on GitHub">Follow @IAmSuyogJadhav</a>
+    <a class="github-button" href="https://github.com/ubamba98" data-size="large" data-show-count="true" aria-label="Follow @ubamba98 on GitHub">Follow @ubamba98</a>
+    <a class="github-button" href="https://github.com/tejus" data-size="large" data-show-count="true" aria-label="Follow @tejus on GitHub">Follow @tejus</a>
   </div>
 </nav>
 
@@ -74,6 +80,7 @@
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
+
 <div class="w3-main" style="margin-left:340px;margin-right:40px;margin-top:75px">
         {% with messages = get_flashed_messages() %}
           {% if messages %}
