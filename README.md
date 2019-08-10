@@ -46,7 +46,7 @@ MRI creates pictures of soft tissue parts of the body that are sometimes hard to
 
 #### About the Dataset
 
-​	The data that we’ve used is the BRATS dataset. This dataset contains the segmented images of the brain tissues. After the image has been segmented, there are 5 classes namely Necrosis, Edema , Non-Enhancing tumour , Enhancing  tumour and the background. There are about 220 images in the training dataset.
+​	The data that we’ve used is the BRATS dataset. This dataset contains the segmented images of the brain tissues. After the image has been segmented, there are 3 classes namely Necrosis/Non-Enhancing tumour (NCR/NET), Edema (ED) and Enhancing  tumour (ET). There are about 220 images in the training dataset.
 
 #### The Model
 
@@ -74,9 +74,10 @@ These skip connections intend to provide local information to the global informa
 <div>  
 <img src="./assets/metric.png" align="right" style="margin:10 10 10 10;" width='200'><br />
 <p>
-        To quantify the performance of our image segmentation, <b>Dice Score</b> is used. The algorithm is validated by calculating the Dice score, which is a measure of how similar the objects are. So it is the size of the overlap of the two segmentations divided by the total size of the two objects. That is, the score for a particular class c is the size of the overlap between the predicted region and its true counterpart. We were able to achieve best coefficient of dice loss score <b>0.43</b> (higher the better).
+        To quantify the performance of our image segmentation, <b>Dice Score</b> is used. The algorithm is validated by calculating the Dice score, which is a measure of how similar the objects are. So it is the size of the overlap of the two segmentations divided by the total size of the two objects. That is, the score for a particular class c is the size of the overlap between the predicted region and its true counterpart. We were able to achieve best coefficient of dice loss score <b>0.61</b> (higher the better).
 </p>
 </div> 
+
 
 # Preview
 <div>
