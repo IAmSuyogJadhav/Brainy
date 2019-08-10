@@ -7,7 +7,38 @@
 
 <hr />
 
-> [Installation Instructions](#Installation-Instructions) towards the end.
+# Preview
+<div>
+<img src="assets/analyze.png" align="centre" width="500px" style="margin: 10 10 10 10;"><br />
+	<p align="center"><b>A screenshot of the project interface</b></p>
+</div>
+
+# Installation Instructions
+
+1. Clone this repository
+
+   ```bash
+   git clone https://github.com/IAmSuyogJadhav/Brainy.git
+   ```
+
+   or [Download](https://github.com/IAmSuyogJadhav/Brainy/archive/master.zip) and then extract its contents.
+
+2. Change to the root folder of repository and run following commands in the terminal:
+
+   ```bash
+	python3 install.py
+   ```
+   This only needs to be done the first time.
+
+3. Start the app using following command, when in the main folder:
+
+   ```bash
+   flask run
+   ```
+
+   It may take a while. 
+
+4. Now open your browser and navigate to http://localhost:5000 and follow the instructions. It is recommended to have a Nvidia GPU, since it can speed up the prediction task manifolds.
 
 # Project Overview
 
@@ -78,53 +109,6 @@ These skip connections intend to provide local information to the global informa
 </p>
 </div> 
 
-
-# Preview
-<div>
-<img src="assets/analyze.png" align="centre" width="500px" style="margin: 10 10 10 10;"><br />
-	<p align="center"><b>A screenshot of the project interface</b></p>
-</div>
-
-# Installation Instructions
-
-> **Please note that the project is NOT yet completely ready to launch, and will probably fail to run on your PC.**
-
-Though the model currently is far from state-of-the-art accuracy, rest of the things should work fine. You can try running the project on your local environment by following the steps below:
-
-1. Clone this repository
-
-   ```bash
-   git clone https://github.com/IAmSuyogJadhav/Brainy.git
-   ```
-
-   or [Download](https://github.com/IAmSuyogJadhav/Brainy/archive/master.zip) and then extract its contents.
-
-2. Change to the root folder of repository and run following commands in the terminal:
-
-   ```bash
-   sudo apt-get install python3 -y
-   sudo apt-get install python3-pip -y
-   pip3 install -r requirements.txt
-   ```
-
-3. Now start the flask server using following command:
-
-   ```bash
-   flask run
-   ```
-
-   It may take a while. 
-
-4. Now open your browser and navigate to http://localhost:5000. Click on **New User?** and register yourself (Don't worry, there's no cloud based database. Your credentials are just being stored locally. Feel free to use fake data.).
-
-5. Upload a `.mha` image using the uploader GUI (you won't need internet for this), choose it from the dropdown menu to analyze the results. This last part is currently under work.
-
-   > You might get an error 
-   >
-   > `Tensor Tensor("activation_143/Sigmoid:0", shape=(?, 1, 120, 120, 120), dtype=float32) is not an element of this graph.` 
-   >
-   > We are investigating this and currently there's no fix for this.
-
 # Team
 
 | <a href="http://github.com/gktejus" target="_blank"><img src="assets/Gk.png" height="150px"></a> | <a href="http://github.com/IAmSuyogJadhav" target="_blank"><img src="assets/Suyog.png" height="150px"></a> | <a href="http://github.com/ubamba98" target="_blank"><img src="assets/Udbhav.png" height="150px"></a> |
@@ -138,24 +122,9 @@ Though the model currently is far from state-of-the-art accuracy, rest of the th
 - Brain Tumor Segmentation with Deep Neural Networks (<https://arxiv.org/pdf/1505.03540.pdf>)
 - Generalised Dice overlap as a deep learning loss function for highly unbalanced segmentations (<https://arxiv.org/abs/1707.03237>)
 - U-Net: Convolutional Networks for Biomedical Image Segmentation (<https://arxiv.org/pdf/1505.04597.pdf>)
-- An Open Source Implementation of 3D-Unet (<https://github.com/96imranahmed/3D-Unet>)
-- BRATS 2015 Dataset (<https://www.med.upenn.edu/>)
+- An Open Source Implementation of 3D-Unet (<https://github.com/ellisdg/3DUnetCNN>)
+- BRATS 2018 Dataset (<https://www.med.upenn.edu/>)
 
 ---
 
 > This project was made as part of the **TCS PanIIT Conclave 2019 - Mission AI: Solve for India**, a 24 hour hackathon organised at IIT Delhi, India on 19th-20th January by the PanIIT organisation, Skillenza and TCS. Our project achieved 4th rank at the same.
-
-# Notebook
-
-The training notebook can be accessed below:
-
-<a href="https://colab.research.google.com/github/IAmSuyogJadhav/Brainy/blob/master/training.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-
-# Contributing
-This project holds huge potential and is still a work in progress. If you'd like to contribute, please [drop me a mail](mailto:me@suyogjadhav.com). Needn't be anything formal, even a "Hello, wanted to contribute to Brainy." would more than suffice :p. I have a couple of things on my mind right now. We can discuss and start working accordingly.
-
-I will be adding a few instructions to get started in the _[wiki](https://github.com/IAmSuyogJadhav/Brainy/wiki)_ tab shortly.
-
-# Updates
-- **30-03-2019**: Completed a step of preprocessing namely, _N4 Bias Correction_. The code has been uploaded in a jupyter notebook (see [Preprocessing.ipynb](Preprocessing.ipynb))
-- **29-03-2019**: Added code for Building ANTS from source, for Colab. An article containing links to pre-built ANTs binaries built specifically for Google Colab and how to install it is also up on my blog ([read here](https://www.suyogjadhav.com/misc/2019/03/28/Using-ANTs-package-on-Google-Colaboratory/)).
