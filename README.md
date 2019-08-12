@@ -41,6 +41,10 @@ to install ll the dependencies. Note that this project is based on python3.
 
 5. Now open your browser and navigate to http://localhost:5000 and follow the instructions. It is recommended to have a Nvidia GPU, since it can speed up the prediction task manifolds.
 
+## Sample MRI scans
+
+There are 2 sample cases from the BraTS2018 dataset insides the `samples/` directory. You can use them to quickly test the app. These cases also contain a file (named in the format `xxx_seg.nii.gz`) that shows the ground truth segmentation map for that case.
+
 # Project Overview
 
 <div>
