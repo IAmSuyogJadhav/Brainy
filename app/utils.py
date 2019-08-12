@@ -9,6 +9,7 @@ import numpy as np
 from keras import backend as K
 import cv2
 import os
+from multiprocessing.pool import ThreadPool
 
 K.set_image_dim_ordering('tf')
 K.set_image_data_format('channels_first')
@@ -104,9 +105,20 @@ def load_old_model(model_file):
             raise error
 
 
+def predict(img):
+    global model, graph
+    with graph.as_default():
+        pred = model.predict(img[None, ...]).squeeze() >= 0.5
+    return pred
+
+
 def make_gif(file):
-    model = load_old_model(app.config['MODEL'])
-    graph = tf.get_default_graph()
+    global model, graph
+    pred = []
+    if 'model' not in globals():
+        model = load_old_model(app.config['MODEL'])
+        graph = tf.get_default_graph()
+
     img = np.load(f'{app.config["UPLOAD_FOLDER"]}/{file}')
     img = np.array([
         preprocess(img[m],  out_shape=(80, 96, 64), labels=True)
@@ -130,10 +142,9 @@ def make_gif(file):
     imageio.mimsave(f'{path}/gifs/flair.gif',
                     [get(i, img) for i in range(img[3].shape[0])], fps=10)
 
-    pad = preprocess(img)
-
-    with graph.as_default():
-        masks = model.predict(pad[None, ...]).squeeze() >= 0.5
+    blob = preprocess(img)
+    pool = ThreadPool(processes=1)
+    pred = pool.apply(predict, (blob,))
 
     path = app.config['UPLOAD_FOLDER']
 
@@ -146,7 +157,7 @@ def make_gif(file):
 
     img_out = np.stack([img, img, img], axis=-1).astype(np.uint8)
 
-    masks = np.stack([masks, masks, masks], axis=-1).astype(np.uint8)
+    masks = np.stack([pred, pred, pred], axis=-1).astype(np.uint8)
     for i in range(3):
         color = colors[i]
         masks[i] *= color
@@ -167,6 +178,8 @@ def make_gif(file):
 
     name = f'{file[:-5]}_mask'
     np.save(os.path.join(app.config['UPLOAD_FOLDER'], name), img_out)
+
+    pred = []
     return name
 
 
